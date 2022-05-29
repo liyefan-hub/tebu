@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
+    <title>购物车界面</title>
+</head>
+
+<body>
+    <header>
+        <!-- 最上方登录条开始 -->
+        <div class="headertop">
+            <div class="container">
+                <ul class="tl">
+                    <li>
+                        <div class="dt">
+                            <span>您好，欢迎光临特步官方商城！</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dt">
+                            <span id="nologin" style="display: block">
+                                <a href="./login.html">注册</a>
+                                <a href="./login.html">登录</a>
+                            </span>
+                            <span id="logining" style="display: none">
+                                <a href="javascript:;" class="loginusername"></a>
+                                <a href="javascript:;" class="loginout">退出</a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="tr">
+                    <li>
+                        <div class="dt"><a href="javacript:;" class="mycenter">我的特步</a></div>
+                    </li>
+                    <li>
+                        <div class="dt"><a href="./login.html">品牌官网</a></div>
+                    </li>
+                    <li class="scan">
+                        <div class="dt scan">
+                            <a href="javascript:;">
+                                <img src="./assets/images/top/mobile_icon.png" alt="手机">
+                                手机特步
+                                <img src="./assets/images/top/down_icon.png" alt="下箭头">
+                            </a>
+                        </div>
+                        <div class="scanimg">
+                            <img src="./assets/images/top/mobile_scan.jpg" alt="二维码">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dt">
+                            <a href="./shoppingcar.html">
+                                <img src="./assets/images/top/cart_icon.png" alt="购物车">
+                                购物车
+                                <span>（<b class="cartnum">0</b>）</span>件
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 最上方登录条结束 -->
+
+        <!-- 搜索栏开始 -->
+        <div class="search">
+            <div class="container">
+                <div class="logo">
+                    <img src="./assets/images/top/logo.png" alt="">
+                </div>
+                <div class="form">
+                    <form action="###">
+                        <input type="text">
+                        <button class="searchbotton"><b>搜索</b></button>
+                    </form>
+                    <div class="hotwords">
+                        <a href="###">热卖搜索：</a>
+                        <a href="###">跑鞋</a>
+                        <a href="###">板鞋</a>
+                        <a href="###">游云3代</a>
+                        <a href="###">老爹鞋</a>
+                        <a href="###">驱能跑鞋</a>
+                        <a href="###">动力巢X</a>
+                    </div>
+                </div>
+
+                <div class="viplogo">
+                    <img src="./assets/images/top/huiyuan.jpg" alt="">
+                    <img src="./assets/images/top/ten.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+        <!-- 搜索栏结束 -->
+
+        <!-- 导航栏背景 -->
+        <div class="bgnav"></div>
+    </header>
+
+    <main>
+        <!-- 正式悬浮导航栏开始 -->
+        <div class="container">
+            <div id="mynav">
+                <div class="menu">
+                    <span><a href="./goodslist.html">全部商品分类</a></span>
+                </div>
+                <div id="menuList" style="display:none">
+                    <ul>
+                        <li>
+                            <table>
+                                <tr>
+                                    <th><a href="javascrippt:;">男鞋</a></th>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;">跑步鞋</a></td>
+                                    <td><a href="javascript:;">综训鞋</a></td>
+                                    <td><a href="javascript:;">休闲鞋</a></td>
+                                    <td><a href="javascript:;">板鞋</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;">篮球鞋</a></td>
+                                    <td><a href="javascript:;">帆布鞋</a></td>
+                                    <td><a href="javascript:;">户外鞋</a></td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tr>
+                                    <th><a href="javascrippt:;">男鞋</a></th>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;">跑步鞋</a></td>
+                                    <td><a href="javascript:;">综训鞋</a></td>
+                                    <td><a href="javascript:;">休闲鞋</a></td>
+                                    <td><a href="javascript:;">板鞋</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;">篮球鞋</a></td>
+                                    <td><a href="javascript:;">帆布鞋</a></td>
+                                    <td><a href="javascript:;">户外鞋</a></td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tr>
+                                    <th><a href="javascrippt:;">男鞋</a></th>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;">跑步鞋</a></td>
+                                    <td><a href="javascript:;">综训鞋</a></td>
+                                    <td><a href="javascript:;">休闲鞋</a></td>
+                                    <td><a href="javascript:;">板鞋</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;">篮球鞋</a></td>
+                                    <td><a href="javascript:;">帆布鞋</a></td>
+                                    <td><a href="javascript:;">户外鞋</a></td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tr>
+                                    <th><a href="javascrippt:;">男鞋</a></th>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;">跑步鞋</a></td>
+                                    <td><a href="javascript:;">综训鞋</a></td>
+                                    <td><a href="javascript:;">休闲鞋</a></td>
+                                    <td><a href="javascript:;">板鞋</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;">篮球鞋</a></td>
+                                    <td><a href="javascript:;">帆布鞋</a></td>
+                                    <td><a href="javascript:;">户外鞋</a></td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tr>
+                                    <th><a href="javascrippt:;">男鞋</a></th>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;">跑步鞋</a></td>
+                                    <td><a href="javascript:;">综训鞋</a></td>
+                                    <td><a href="javascript:;">休闲鞋</a></td>
+                                    <td><a href="javascript:;">板鞋</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;">篮球鞋</a></td>
+                                    <td><a href="javascript:;">帆布鞋</a></td>
+                                    <td><a href="javascript:;">户外鞋</a></td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tr>
+                                    <th><a href="javascrippt:;">男鞋</a></th>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;">跑步鞋</a></td>
+                                    <td><a href="javascript:;">综训鞋</a></td>
+                                    <td><a href="javascript:;">休闲鞋</a></td>
+                                    <td><a href="javascript:;">板鞋</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;">篮球鞋</a></td>
+                                    <td><a href="javascript:;">帆布鞋</a></td>
+                                    <td><a href="javascript:;">户外鞋</a></td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tr>
+                                    <th><a href="javascrippt:;">男鞋</a></th>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;">跑步鞋</a></td>
+                                    <td><a href="javascript:;">综训鞋</a></td>
+                                    <td><a href="javascript:;">休闲鞋</a></td>
+                                    <td><a href="javascript:;">板鞋</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;">篮球鞋</a></td>
+                                    <td><a href="javascript:;">帆布鞋</a></td>
+                                    <td><a href="javascript:;">户外鞋</a></td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tr>
+                                    <th><a href="javascrippt:;">男鞋</a></th>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;">跑步鞋</a></td>
+                                    <td><a href="javascript:;">综训鞋</a></td>
+                                    <td><a href="javascript:;">休闲鞋</a></td>
+                                    <td><a href="javascript:;">板鞋</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;">篮球鞋</a></td>
+                                    <td><a href="javascript:;">帆布鞋</a></td>
+                                    <td><a href="javascript:;">户外鞋</a></td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="navigation">
+                    <ul>
+                        <li><a href="./index.html">首页</a></li>
+                        <li class="run"><a href="javascript:;">跑步</a></li>
+                        <li class="man"><a href="javascript:;">男子</a></li>
+                        <li class="woman"><a href="javascript:;">女子</a></li>
+                        <li class="child"><a href="javascript:;">儿童</a></li>
+                        <li class="accessories"><a href="javascript:;">配件</a></li>
+                        <li class="marathon"><a href="javascript:;">马拉松</a></li>
+                        <li><a href="javascript:;"><i>团购定制</i></a></li>
+                    </ul>
+                </div>
+                <!---跑步弹出菜单-->
+                <div id="menuRun" style="display:none;">
+                    <div class="item-box">
+                        <a class="line-nav-ad" href="javascript:;">
+                            <img src="./assets/images/menuimg/run.jpg">
+                        </a>
+                        <ul>
+                            <li>
+                                <h4><a href="javascript:;" title="男子跑步">男子跑步</a></h4>
+                                <a href="javascript:;" title="男子跑鞋">跑步鞋</a>
+                                <a href="javascript:;" title="男子跑服">跑步服</a>
+                            </li>
+                            <li>
+                                <h4><a href="javascript:;" title="女子跑步">女子跑步</a></h4>
+                                <a href="javascript:;" title="女子跑鞋">跑步鞋</a>
+                                <a href="javascript:;" title="女子跑服">跑步服</a>
+                            </li>
+                            <li>
+                                <h4>新品推荐</h4>
+                                <a href="javascript:;" title="女子跑鞋">减震旋科技</a>
+                                <a href="javascript:;" title="女子跑服">动力巢科技</a>
+                                <a href="javascript:;" title="女子跑服">气能环科技</a>
+                                <a href="javascript:;" title="女子跑服">柔立方科技</a>
+                            </li>
+                            <li>
+                                <h4>专题</h4>
+                                <a class="a-red" href="javascript:;" title="">氢风科技</a>
+                                <a class="a-red" href="javascript:;" title="">321跑步专业装备</a>
+                                <a class="a-red" href="javascript:;" title="">以柔克刚</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!---男子弹出菜单-->
+                <div id="menuMan" style="display:none">
+                    <div class="item-box">
+                        <a class="line-nav-ad" href="javascript:;">
+                            <img src="./assets/images/menuimg/man.jpg">
+                        </a>
+                        <ul>
+                            <li>
+                                <h4><a href="javascript:;" title="运动表现">运动表现</a></h4>
+                                <a href="javascript:;" title="运动鞋">运动鞋</a> <a href="javascript:;" title="运动服">运动服</a>
+                            </li>
+                            <li>
+                                <h4><a href="javascript:;" title="运动生活">运动生活</a></h4>
+                                <a href="javascript:;" title="休闲鞋">休闲鞋</a> <a href="javascript:;" title="休闲服">休闲服</a>
+                            </li>
+                            <li>
+                                <h4>新品推荐</h4>
+                            </li>
+                            <li>
+                                <h4>专题</h4>
+                                <a class="a-red" href="javascript:;" title="">释冰科技</a><a class="a-red"
+                                    href="javascript:;" title="">Smiley专题</a><a class="a-red" href="javascript:;"
+                                    title="">跟上没啊</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!---女子弹出菜单-->
+                <div id="menuWoman" style="display:none">
+                    <div class="item-box">
+                        <a class="line-nav-ad" href="javascript:;">
+                            <img src="./assets/images/menuimg/woman.jpg">
+                        </a>
+                        <ul>
+                            <li>
+                                <h4><a href="javascript:;" title="运动表现">运动表现</a></h4>
+                                <a href="javascript:;" title="运动鞋">运动鞋</a>
+                                <a href="javascript:;" title="运动服">运动服</a>
+                            </li>
+                            <li>
+                                <h4><a href="javascript:;" title="运动生活">运动生活</a></h4>
+                                <a href="javascript:;" title="休闲鞋">休闲鞋</a>
+                                <a href="javascript:;" title="休闲服">休闲服</a>
+                            </li>
+                            <li>
+                                <h4>新品推荐</h4>
+                            </li>
+                            <li>
+                                <h4>专题</h4>
+                                <a class="a-red" href="javascript:;" title="">漫步涂鸦</a>
+                                <a class="a-red" href="javascript:;" title="">从新定义</a>
+                                <a class="a-red" href="javascript:;" title="">女子研究所</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!---儿童弹出菜单-->
+                <div id="menuChild" style="display:none">
+                    <div class="item-box">
+                        <a class="line-nav-ad" href="javascript:;">
+                            <img src="./assets/images/menuimg/child.jpg">
+                        </a>
+                        <ul>
+                            <li>
+                                <h4><a href="javascript:;" title="童鞋">童鞋</a></h4>
+                                <a href="javascript:;" title="跑步鞋">跑步鞋</a>
+                                <a href="javascript:;" title="休闲鞋">休闲鞋</a>
+                            </li>
+                            <li>
+                                <h4><a href="javascript:;" title="女子跑步">童装</a></h4>
+                                <a href="javascript:;" title="短袖">短袖</a>
+                                <a href="javascript:;" title="短裤">短裤</a>
+                            </li>
+                            <li>
+                                <h4>新品推荐</h4>
+                            </li>
+                            <li>
+                                <h4>优惠活动</h4>
+                                <a class="a-red" href="javascript:;" title="">关注“特步官方商城”微信公众号，回复优惠券领取</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!--配件弹出菜单-->
+                <div id="menuAccessories" style="display:none">
+                    <div class="item-box">
+                        <a class="line-nav-ad" href="javascript:;">
+                            <img src="./assets/images/menuimg/accessories.jpg">
+                        </a>
+                        <ul>
+                            <li>
+                                <h4><a href="javascript:;" title="运动包">运动包</a>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4><a href="javascript:;" title="运动袜">运动袜</a>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4><a href="javascript:;" title="帽子">帽子</a>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4><a href="javascript:;" title="护具">护具</a>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4><a href="javascript:;" title="内裤">内裤</a>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>优惠活动</h4>
+                                <a class="a-red" href="javascript:;" title="">关注“特步官方商城”微信公众号，回复优惠券领取</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-------马拉松弹出菜单-------->
+                <div id="menuMarathon" style="display:none">
+                    <div class="item-box">
+                        <a class="line-nav-ad" href="javascript:;">
+                            <img src="./assets/images/menuimg/marathon.jpg">
+                        </a>
+                        <ul>
+                            <li>
+                                <h4><a href="javascript:;" title="竞速160">竞速160</a></h4>
+                            </li>
+                            <li>
+                                <h4><a href="javascript:;" title="竞训300">竞训300</a></h4>
+                            </li>
+                            <li>
+                                <h4><a href="javascript:;" title="跑步服饰系列">跑步服饰系列</a>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4><a href="javascript:;" title="马拉松专题">马拉松专题</a></h4>
+                                <a class="a-red" href="javascript:;" title="">沈阳马拉松</a>
+                                <a class="a-red" href="javascript:;" title="">成都马拉松</a>
+                                <a class="a-red" href="javascript:;" title="">太原马拉松</a>
+                            </li>
+                            <li>
+                                <h4>优惠活动</h4>
+                                <a class="a-red" href="javascript:;" title="">关注“特步官方商城”微信公众号，回复优惠券领取</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 购物车界面 -->
+        <div class="step">
+            <div class="container">
+                <img src="./assets/images/shopping/Step-1.gif" alt="">
+            </div>
+        </div>
+
+
+        <!-- 购物车界面 -->
+        <div id="car">
+            <div class="title">
+                <h2>我的购物车</h2>
+            </div>
+            <table class="tab_shopper">
+                <thead>
+                    <tr>
+                        <td><label>选择</label></td>
+                        <td>商品</td>
+                        <td>价格</td>
+                        <td width="95">数量</td>
+                        <td>小计</td>
+                        <td>操作</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr class="goods">
+                            <td>
+                                <input type="checkbox" checked="checked" class="check" />
+                            </td>
+                            <td class="maintd">
+                                <img src="${res[i].imgUrl}" class="img" />
+                                <a href="javascript:;">
+                                    ${res[i].imgTitle}
+                                </a>
+                                <br />
+                                <span> 颜色：黑白 尺码：39码</span>
+                            </td>
+                            <td>￥<b class="priceone">${s[i].money}</b></td>
+                            <td>
+                                <div class="spinner">
+                                    <span class="decrease">-</span>
+                                    <input type="text" value="${goods[j].num}"  class="numinput"/>
+                                    <span class="increase">+</span>
+                                </div>
+                            </td>
+                            <td class="addprice">${(goods[j].num * res[i].money).toFixed(2)}</td>
+                            <td><a class="shopdelthis" href="javascript:;">删除</a></td>
+                        </tr> -->
+
+                    <tr class="select">
+                        <td colspan="10" class="btnone">
+                            <label>
+                                <input type="checkbox" name="checkbox" class="selectAll" checked="checked" />
+                                <span>全选</span>
+                            </label>
+                            <a href="javascript:;" class="alldel" id="btnDel">X批量删除</a>
+                            <div class="tj">
+                                <div>共选中<span class="numbercount" id="allshopcount">1</span>件商品</div>
+                                <p> 支付积分：<span class="totalpaypoint">0</span></p>
+                                <p> 缴纳税费：<span class="totaltaxfee">0</span></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="end">
+                        <td colspan="10" class="btnoneb">
+                            <div class="endprice">
+                                总计（不含运费）
+                                <span style="color: #c01a20;font-size: 28px;">¥</span>
+                                <span class="priceBig"></span>
+                            </div>
+
+                            <div>
+                                已节省：<span style="color: #666;font-size: 14px;">-¥0.00</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="10">
+                            <a href="./goodslist.html" id="clickbuy" class="gobuy"><span>继续购物</span></a>
+                            <a href="javascript:;" class="goonbuy"><span>去结算</span></a>
+                            <!-- <a href="./buy.html" class="goonbuy"><span>去结算</span></a> -->
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+
+
+
+    </main>
+
+
+    <!-- 尾部 -->
+    <footer>
+        <!-- 尾部服务栏开始 -->
+        <div class="server">
+            <div class="container">
+                <div class="server-left">
+                    <table>
+                        <tr>
+                            <th><a href="javascript:;">关于我们</a></th>
+                            <th><a href="javascript:;">购物指南</a></th>
+                            <th><a href="javascript:;">售后服务</a></th>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:;">公司简介</a></td>
+                            <td><a href="javascript:;">常见问题</a></td>
+                            <td><a href="javascript:;">配送方式</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:;">联系我们</a></td>
+                            <td><a href="javascript:;">用户注册</a></td>
+                            <td><a href="javascript:;">防伪查询</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:;"></a></td>
+                            <td><a href="javascript:;">购物流程</a></td>
+                            <td><a href="javascript:;"></a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="server-right">
+                    <h3>400-008-7666</h3>
+                    <p>周一至周日 8:30-21:30</p>
+                    <a href="javascript:;"><img src="./assets/images/bottom/zxkf1.png" alt=""></a>
+                    <p>周一至周日 9:00-23:00</p>
+                </div>
+            </div>
+        </div>
+        <!-- 尾部服务栏结束 -->
+
+        <!-- 尾部黑条开始 -->
+        <div class="foot-img">
+            <div class="container">
+                <img src="./assets/images/bottom/x-footer.jpg" alt="">
+            </div>
+        </div>
+        <!-- 尾部黑条结束 -->
+
+
+        <!-- 尾部版权声明开始 -->
+        <div class="foot-msg">
+            <div class="msgtop">
+                <ul>
+                    <li><a href="javasctipt:;">关于特步</a></li><span>|</span>
+                    <li><a href="javasctipt:;">人才招聘</a></li><span>|</span>
+                    <li><a href="javasctipt:;">帮助中心</a></li><span>|</span>
+                    <li><a href="javasctipt:;">友情链接</a></li><span>|</span>
+                    <li><a href="javasctipt:;">联系我们</a></li>
+                </ul>
+            </div>
+            <p>特步跑鞋 Copyright 2011 xtep.com 特步运动服 All Rights Reserved 特步官方旗舰店 ICP：闽ICP备05021253号-1 特步官网专卖店</p>
+            <div class="copy">
+                <img src="../assets/images/bottom/1234.png" alt="">
+                <span>闽公网安备 35020302001628号</span>
+            </div>
+        </div>
+        <!-- 尾部版权声明结束 -->
+
+        <!-- 尾部赞助开始 -->
+
+        <div class="container">
+            <div class="aside">
+                <img src="./assets/images/bottom/onlinepay.jpg" alt="">
+                <img src="./assets/images/bottom/goodwebsite.jpg" alt="">
+                <img src="./assets/images/bottom/salf.jpg" alt="">
+                <img src="./assets/images/bottom/ei_normal.png" alt="">
+            </div>
+
+        </div>
+        <!-- 尾部赞助结束 -->
+    </footer>
+
+
+
+    <!-- 侧边固定定位导航 -->
+    <!-- <div id="sidebox"> -->
+        <!-- PC右侧固定导航 -->
+        <!-- <div class="sidebg"></div>
+        <div class="sidenav">
+            <div class="sidelogo">
+                <a href="javascript:;">
+                    <i class="sidelogobg"></i>
+                </a>
+            </div>
+            <div class="sidecart">
+                <a href="./shoppingcar.html">
+                    <i class="sidecartbg"></i>
+                    <span>购物车</span>
+                    <b>0</b>
+                </a>
+            </div>
+            <div class="customer">
+                <a href="javascript:;">
+                    <i class="customerbg"></i>
+                    <span>联系客服</span>
+                </a>
+                <div id="customernav">
+                    <div class="ctimg">
+                        <img src="./assets/images/asidenav/as1.png" alt="">
+                        <img src="./assets/images/asidenav/as2.png" alt="">
+                    </div>
+                    <i class="ct"></i>
+                </div>
+            </div>
+            <div class="twocode">
+                <a href="javascript:;">
+                    <i class="twocodebg"></i>
+                </a>
+                <div id="twonav">
+                    <div class="codeimg">
+                        <img src="./assets/images/asidenav/sj.png" alt="">
+                    </div>
+                    <i class="tw"></i>
+                </div>
+            </div>
+            <div class="gotop">
+                <a href="javascript:;">
+                    <i class="gotopbg"></i>
+                </a>
+                <div id="gotopnav" class="gotop">
+                    <div class="backtop">返回顶部</div>
+                    <i class="go"></i>
+                </div>
+            </div> -->
+        <!-- </div> -->
+
+
+
+
+
+
+    </div>
+</body>
+
+
+<script type="text/javascript" src="./assets/js/jquery.1.7.2.min.js"></script>
+<script type="text/javascript" src="./assets/js/mvali.js"></script>
+<script type="text/javascript" src="./assets/js/picMove.js"></script>
+<script type="text/javascript" src="./assets/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="./assets/js/ionic.bundle.min.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+<script>
+
+    // 引入其他公共功能
+    $(document).ready(function (e) {
+        $(document).jqueryMenu();
+    });
+
+    // 判断是否登录，未登录则跳转到登录界面
+    if (localStorage.getItem('login') == 'off') {
+        window.open('./login.html');
+    }
+
+    // 获取cookie数据并渲染页面显示对应商品
+    $(document).car({
+        url: "../data/goodsright.json",
+        // url: "http://localhost/xtep/特步官方商城/dist/data/goodsright.json",
+        tbody: $('.tab_shopper').find('tbody')
+    });
+
+
+    
+
+
+
+
+
+</script>
+
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,11 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./cart.css">
-    <title>购物车界面</title>
+    <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
+    <title>登录页面</title>
 </head>
 
 <body>
+    <!-- 引入头部 -->
     <header>
         <!-- 最上方登录条开始 -->
         <div class="headertop">
@@ -55,8 +56,8 @@
                         </div>
                     </li>
                     <li>
-                        <div class="dt">
-                            <a href="./shoppingcar.html">
+                        <div class="dt shopcar">
+                            <a href="javascript:;">
                                 <img src="./assets/images/top/cart_icon.png" alt="购物车">
                                 购物车
                                 <span>（<b class="cartnum">0</b>）</span>件
@@ -104,13 +105,14 @@
     </header>
 
     <main>
+        <!-- 引入弹出框导航 -->
         <!-- 正式悬浮导航栏开始 -->
-        <div class="container">
+        <div class="container" id="mainnav">
             <div id="mynav">
                 <div class="menu">
-                    <span><a href="./goodslist.html">全部商品分类</a></span>
+                    <span><a href="javascrippt:;">全部商品分类</a></span>
                 </div>
-                <div id="menuList" style="display:none">
+                <div id="menuList" style="display:none;z-index: 999;">
                     <ul>
                         <li>
                             <table>
@@ -460,290 +462,370 @@
                 </div>
             </div>
         </div>
+        <!-- 正式悬浮导航栏结束 -->
 
-
-
-        <!-- 购物车界面 -->
-        <!-- <div class="step">
+        <!-- 登录界面开始 -->
+        <div class="loginbg">
             <div class="container">
-                <img src="./assets/images/shopping/Step-1.gif" alt="">
+                <div class="loginbox">
+                    <!-- 登录框 -->
+                    <div class="login">
+                        <h2 class="logintop">用户登录<a href="javascript:;" class="openreg">免费注册&gt;&gt;</a></h2>
+                        <form class="verifyform">
+                            <ul>
+                                <li class="vali">
+                                    <label for="username"></label>
+                                    <input name="txtName" id="username" type="text" class="username Required" placeholder="邮箱/用户名/登陆手机"/>
+                                </li>
+                                <li class="vali">
+                                    <label for="password"></label>
+                                    <input name="pass" id="password" type="password" class="password Required" placeholder="密码"/>
+                                    <b class="error" style="display: none;color:red;">用户名或密码错误</b>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="forgetp">忘记密码？</a>
+                                </li>
+                                <li>
+                                    <input type="button" class="btn-login btn loginbtn over" 
+                                    value="登录">
+                                </li>
+                                <li style="margin-left:10px;" class="other">
+                                    其他登录方式：
+                                    <a href="javascript:;" class="icon-qq">QQ</a>&nbsp;&nbsp;&nbsp;
+                                    <a href="javascript:;" class="icon-sina">新浪微博</a>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+
+                    <!-- 注册框 -->
+                    <div class="reg">
+                        <form class="verifyformreg">
+                            <div class="reg-boxl">
+                                <h2 class="register">快速注册</h2>
+                                <div class="reg-box-inner ">
+                                    <ul>
+                                        <li class="vali">
+                                            <label class="lb-nor">
+                                                <span>*</span> 用 户 名：</label>
+                                            <input name="username" type="text"
+                                                class="box-f Required username regname" />
+
+                                        </li>
+                                        <li class="vali">
+                                            <label class="lb-nor">
+                                                <span>*</span> 密 码：</label>
+                                            <input name="password" type="password"
+                                                class="box-f Required password regpass" />
+                                        </li>
+                                        <li class="vali">
+                                            <label class="lb-nor">
+                                                <span>*</span> 确认密码：</label>
+                                            <input name="password2" id="password2" type="password"
+                                                class="box-f Required passw" />
+
+                                        </li>
+                                        <li class="vali">
+                                            <label class="lb-nor">
+                                                <span>*</span> 手机号：</label>
+                                            <input name="mobile" id="mobile" type="tel" class="box-f Required phone" />
+                                        </li>
+                                        <li class="vali">
+                                            <label class="lb-nor">
+                                                <span>*</span> 验 证 码：</label>
+                                            <input type="text"
+                                                style="width: 100px; border-color: rgb(153, 153, 153); background-color: rgb(245, 245, 245);"
+                                                maxlength="5" class="box-r v" name="ValidateCode" />
+                                            <img src="./assets/images/loginimg/Validate.jpg" title="点击刷新" />
+                                        </li>
+                                        <li>
+                                            <label class="lb"></label>
+                                            <label class="vali">
+                                                <input id="agreement" class="check" name="agreement" type="checkbox"
+                                                    value="on" />
+                                                我已看过并接受
+                                                <a href="javascript:;">《特步用户协议》</a>
+                                            </label>
+                                        </li>
+                                        <li class="vali">
+                                            <label class="lb"></label>
+                                            <input type="submit" class="btn-login loginreg" value="立即注册">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="reg-boxr">已有特步账号？<br>
+                                <input type="submit" class="btn-login submit" value="立即登录"><br>
+                                <span>其他登录方式：</span>
+                                <a href="javascript:;" class="icon-qq">QQ</a>&nbsp;&nbsp;&nbsp;
+                                <a href="javascript:;" class="icon-sina">新浪微博</a>
+                            </div>
+                            <a class="bigclose">X</a>
+                        </form>
+                    </div>
+
+                    <!-- 找回密码框 -->
+                    <div class="regfind">
+                        <form class="verifyformfind">
+                            <div class="reg-boxl">
+                                <h2 class="register">方式一：手机找回密码</h2>
+                                <div class="findtip">
+                                    <p>忘记了密码？请输入用户名和注册时填写的手机号码</p>
+                                    <p>我们会将重设密码邮件发送到您的手机号码！</p>
+                                </div>
+                                <div class="reg-box-inner">
+                                    <ul>
+                                        <li class="vali">
+                                            <label class="lb-nor">
+                                                <span>*</span> 用 户 名：</label>
+                                            <input name="username" class="username box-f" type="text" />
+                                        </li>
+                                        <li class="vali">
+                                            <label class="lb-nor">
+                                                <span>*</span> 手机号：</label>
+                                            <input name="mobile" class="mobile box-f phone" type="tel" />
+                                        </li>
+                                        <li class="vali">
+                                            <label class="lb-nor ">
+                                                <span>*</span> 验 证 码：</label>
+                                            <input type="text"
+                                                style="width: 100px; border-color: rgb(153, 153, 153); background-color: rgb(245, 245, 245);"
+                                                maxlength="5" class="box-r v" name="ValidateCode" />
+                                            <img src="./assets/images/loginimg/Validate.jpg" title="点击刷新" />
+                                        </li>
+                                        <li>
+                                            <label class="lb"></label>
+                                            <input type="submit" class="btn-login btn" value="提交">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="reg-boxr">
+                                <h2 class="register">方式二：邮箱找回密码</h2>
+                                <div class="findtip">
+                                    <p>忘记了密码？请输入用户名和注册时填写的邮箱</p>
+                                    <p>我们会将重设密码邮件发送到您的邮箱！</p>
+                                </div>
+                                <div class="reg-box-inner">
+                                    <ul>
+                                        <li class="vali">
+                                            <label class="lb-nor">
+                                                <span>*</span> 用 户 名：</label>
+                                            <input name="username" class="username box-f" type="text" />
+
+                                        </li>
+                                        <li class="vali">
+                                            <label class="lb-nor">
+                                                <span>*</span> 电子邮箱：</label>
+                                            <input name="email" class="email box-f eal" type="email" />
+                                        </li>
+                                        <li class="vali">
+                                            <label class="lb-nor">
+                                                <span>*</span> 验 证 码：</label>
+                                            <input type="text"
+                                                style="width: 100px; border-color: rgb(153, 153, 153); background-color: rgb(245, 245, 245);"
+                                                maxlength="5" class="box-r v" name="ValidateCode" />
+                                            <img src="./assets/images/loginimg/Validate.jpg" title="点击刷新" />
+                                        </li>
+                                        <li>
+                                            <label class="lb"></label>
+                                            <input type="submit" class="btn-login btn" value="提交">
+                                            <!-- <button class="btn-login submit" style="width:80px">提交</button> -->
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a class="bigclose">X</a>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div> -->
-
-
-
+        </div>
+        <!-- 登录界面结束 -->
     </main>
-    <div class="py-container">
-        <div class="w">
-            <div class="allgoods">
-                <h4>全部商品
-                    <span>11</span>
-                </h4>
-                <div class="cart-main">
-                    <div class="cart-th clearfix">
-                        <div>
-                            <input type="checkbox">全选</div>
-                        <div class="">商品</div>
-                        <div class="">单价（元）</div>
-                        <div class="">数量</div>
-                        <div class="">小计（元）</div>
-                        <div class="">操作</div>
-                    </div>
-                    <div class="cart-title clearfix">
-                        <h5 class="fl">京东自营</h5>
-                        <div class="yunfei fr">
-                            运费：￥6.00
-                            <span>还差￥99.00免运费</span>
-                        </div>
-                    </div>
-                    <div class="cart-item-list">
-                        <div class="cart-body">
-                            <div class="cart-list">
-
-                                    <!-- <ul class="goods-list yui3-g">
-                                        <li class="yui3-u-3-8 pr">
-                                            <input type="checkbox" class="good-checkbox">
-                                            <div class="good-item">
-                                                <div class="item-img">
-                                                    <img src="uploads/mobile.png">
-                                                </div>
-                                                <div class="item-msg">Apple Macbook Air 13.3英寸笔记本电脑 银色（Corei5）处理器/8GB内存</div>
-                                            </div>
-                                        </li>
-                                        <li class="yui3-u-1-8">
-                                            <span>颜色: 银色</span>
-                                            <br>
-                                            <span>处理器: Core I5</span>
-                                            <br>
-                                            <span>内存: 8GB</span>
-                                            <br>
-                                            <span>尺寸: 13.3英寸</span>
-                                            <br>
-                                        </li>
-                                        <li class="yui3-u-1-8">
-                                            <span class="price">8848.00</span>
-                                        </li>
-                                        <li class="yui3-u-1-8">
-                                            <div class="clearfix">
-                                                <a href="javascript:;" class="increment mins">-</a>
-                                                <input autocomplete="off" type="text" value="1" minnum="1" class="itxt">
-                                                <a href="javascript:;" class="increment plus">+</a>
-                                            </div>
-                                            <div class="youhuo">有货</div>
-                                        </li>
-                                        <li class="yui3-u-1-8">
-                                            <span class="sum">8848.00</span>
-                                        </li>
-                                        <li class="yui3-u-1-8">
-                                            <div class="del1">
-                                                <a href="javascript:;">删除</a>
-                                            </div>
-                                            <div>移到我的关注</div>
-                                        </li>
-                                    </ul> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cart-tool clearfix">
-                        <div class="money-box">
-                            <div class="sumprice">
-                                <div class="sumprice-top">
-                                    <span>
-                                        已选择
-                                        <strong>0</strong> 件商品</span>
-                                    <span>
-                                        <em>总价（不含运费）：</em>
-                                        <i class="summoney">￥
-                                            <span>44240.00</span>
-                                        </i>
-                                    </span>
-                                </div>
-                                <div class="sumprice-bottom">
-                                    已节省：￥20.00
-                                </div>
-                            </div>
-                            <div class="sumbtn">
-                                <a class="sum-btn" href="pay.html">结算</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- 尾部 -->
-    <footer>
-        <!-- 尾部服务栏开始 -->
-        <div class="server">
-            <div class="container">
-                <div class="server-left">
-                    <table>
-                        <tr>
-                            <th><a href="javascript:;">关于我们</a></th>
-                            <th><a href="javascript:;">购物指南</a></th>
-                            <th><a href="javascript:;">售后服务</a></th>
-                        </tr>
-                        <tr>
-                            <td><a href="javascript:;">公司简介</a></td>
-                            <td><a href="javascript:;">常见问题</a></td>
-                            <td><a href="javascript:;">配送方式</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="javascript:;">联系我们</a></td>
-                            <td><a href="javascript:;">用户注册</a></td>
-                            <td><a href="javascript:;">防伪查询</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="javascript:;"></a></td>
-                            <td><a href="javascript:;">购物流程</a></td>
-                            <td><a href="javascript:;"></a></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="server-right">
-                    <h3>400-008-7666</h3>
-                    <p>周一至周日 8:30-21:30</p>
-                    <a href="javascript:;"><img src="./assets/images/bottom/zxkf1.png" alt=""></a>
-                    <p>周一至周日 9:00-23:00</p>
-                </div>
-            </div>
-        </div>
-        <!-- 尾部服务栏结束 -->
-
-        <!-- 尾部黑条开始 -->
-        <div class="foot-img">
-            <div class="container">
-                <img src="./assets/images/bottom/x-footer.jpg" alt="">
-            </div>
-        </div>
-        <!-- 尾部黑条结束 -->
 
 
-        <!-- 尾部版权声明开始 -->
-        <div class="foot-msg">
-            <div class="msgtop">
-                <ul>
-                    <li><a href="javasctipt:;">关于特步</a></li><span>|</span>
-                    <li><a href="javasctipt:;">人才招聘</a></li><span>|</span>
-                    <li><a href="javasctipt:;">帮助中心</a></li><span>|</span>
-                    <li><a href="javasctipt:;">友情链接</a></li><span>|</span>
-                    <li><a href="javasctipt:;">联系我们</a></li>
-                </ul>
-            </div>
-            <p>特步跑鞋 Copyright 2011 xtep.com 特步运动服 All Rights Reserved 特步官方旗舰店 ICP：闽ICP备05021253号-1 特步官网专卖店</p>
-            <div class="copy">
-                <img src="../assets/images/bottom/1234.png" alt="">
-                <span>闽公网安备 35020302001628号</span>
-            </div>
-        </div>
-        <!-- 尾部版权声明结束 -->
-
-        <!-- 尾部赞助开始 -->
-
-        <div class="container">
-            <div class="aside">
-                <img src="./assets/images/bottom/onlinepay.jpg" alt="">
-                <img src="./assets/images/bottom/goodwebsite.jpg" alt="">
-                <img src="./assets/images/bottom/salf.jpg" alt="">
-                <img src="./assets/images/bottom/ei_normal.png" alt="">
-            </div>
-
-        </div>
-        <!-- 尾部赞助结束 -->
-    </footer>
-
-
-
-    <!-- 侧边固定定位导航 -->
-    <!-- <div id="sidebox"> -->
-        <!-- PC右侧固定导航 -->
-        <!-- <div class="sidebg"></div>
-        <div class="sidenav">
-            <div class="sidelogo">
-                <a href="javascript:;">
-                    <i class="sidelogobg"></i>
-                </a>
-            </div>
-            <div class="sidecart">
-                <a href="./shoppingcar.html">
-                    <i class="sidecartbg"></i>
-                    <span>购物车</span>
-                    <b>0</b>
-                </a>
-            </div>
-            <div class="customer">
-                <a href="javascript:;">
-                    <i class="customerbg"></i>
-                    <span>联系客服</span>
-                </a>
-                <div id="customernav">
-                    <div class="ctimg">
-                        <img src="./assets/images/asidenav/as1.png" alt="">
-                        <img src="./assets/images/asidenav/as2.png" alt="">
-                    </div>
-                    <i class="ct"></i>
-                </div>
-            </div>
-            <div class="twocode">
-                <a href="javascript:;">
-                    <i class="twocodebg"></i>
-                </a>
-                <div id="twonav">
-                    <div class="codeimg">
-                        <img src="./assets/images/asidenav/sj.png" alt="">
-                    </div>
-                    <i class="tw"></i>
-                </div>
-            </div>
-            <div class="gotop">
-                <a href="javascript:;">
-                    <i class="gotopbg"></i>
-                </a>
-                <div id="gotopnav" class="gotop">
-                    <div class="backtop">返回顶部</div>
-                    <i class="go"></i>
-                </div>
-            </div> -->
-        <!-- </div> -->
-
-
-
-
-
-
-    </div>
+    <!-- 引入尾部 -->
+    <div id="foot"></div>
 </body>
-
 
 <!-- <script type="text/javascript" src="./assets/js/jquery.1.7.2.min.js"></script>
 <script type="text/javascript" src="./assets/js/mvali.js"></script>
 <script type="text/javascript" src="./assets/js/picMove.js"></script>
 <script type="text/javascript" src="./assets/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="./assets/js/ionic.bundle.min.js"></script>
 <script type="text/javascript" src="./js/main.js"></script> -->
 <!-- <script>
+    // 引入脚部
+    $('#foot').load("./public.html footer");
 
-    // 引入其他公共功能
+    // 点击立即注册，设置相应的localStorage
+    $('.loginreg').on('click', function () {
+        var name = $('.regname')[0].value;
+        var pass = $('.regpass')[0].value;
+        localStorage.setItem('username', name);
+        localStorage.setItem('password', pass);
+    })
+
+
+    // 点击登录按钮后
+    $('.loginbtn').on('click', function () {
+        var name = $('#username')[0].value;
+        var pass = $('#password')[0].value;
+        var lname = localStorage.getItem('username');
+        var lpass = localStorage.getItem('password');
+        if (name == lname && pass == lpass) {
+            window.open('./index.html');
+            localStorage.setItem('login', 'on');
+        } else {
+            $('.error').show();
+        }
+    })
+
+
+
+    //点击免费注册，注册窗口打开，关闭登录窗口
+    $('.openreg').on('click', function () {
+        $('.login').hide();
+        $('.reg').show();
+    })
+
+    //点击忘记密码，找回密码窗口打开，关闭登录窗口
+    $('.forgetp').on('click', function () {
+        $('.login').hide();
+        $('.regfind').show();
+    })
+
+    //点击注册窗口右上角关闭，关闭注册和找回密码窗口，打开登录窗口
+    $('.bigclose').on('click', function () {
+        $('.login').show();
+        $('.reg').hide();
+        $('.regfind').hide();
+    });
+
+    // 点击立即登录，关闭注册窗口，打开登录窗口
+    $('.submit').on('click', function () {
+        $('.login').show();
+        $('.reg').hide();
+        $('.regfind').hide();
+    });
+
+
+
+    //登录表单验证
+    $.myvali({
+        myform: ".verifyform", //表单id
+        mybtn: ".btn", //提交表单按钮id	
+        myVali: ".vali", //input父盒子的class，可自定义类名
+        isCheckbox: ".check", //勾选阅读同意
+
+        Required: ".Required", //验证必填选项，值为Required,input自己加class
+        RequiredTps: ["此项不能为空!!!"], //只验证不为空提示
+
+        Requireds: ".Requireds", //验证必填不同提示，值为Requireds,input自己加class
+        reqtps: ".reqtps", //验证不为空不同提示,input父盒子的class,可自定义类名
+        Reqlength: [
+            [2, 4]
+        ], //只验证不为空,设置最小长度和最大长度
+        ReqlengthTps: ["+不为空1"], //验证不为空长度提示
+        RequiredsTps: ["这是自定义提示1"], //默认提示
+
+        myName: ".username", //用户名id或class
+        myPassword: ".password", //密码id或class
+        myPasswordMinLength: 6, //密码最小长度，不写默认长度6
+        myPasswordMaxLength: 18, //密码最大长度，不写默认长度16
+        // myConfirmPassword: ".passw", //确认密码id或class
+        myPhone: ".phone", //手机号id或class
+        isPhoneCode: false, //开启手机短信验证，true开启，默认false不开启(此项功能与myPhone配合验证)
+        myPhone1: "#v", //修改手机号(原手机号用这个验证)id或class
+        phoneCodeInput: ".phcode", //短信验证码id或class（输入框）
+        myMailbox: ".eal", //邮箱id或class
+        myCode: ".v", //验证码id或class
+        PwdStrong: true, //密码强度验证，默认false不开启，true开启
+        isStrongTps: ["弱", "中", "强"], //密码强度提示，可自定义提示
+        myNameMinLength: 3, //用户名最小长度，不写默认长度3
+        myNameMaxLength: 18, //用户名最大长度，不写默认长度12
+    });
+
+
+    //注册表单验证
+    $.myvali({
+        myform: ".verifyformreg", //表单id
+        mybtn: ".btn", //提交表单按钮id	
+        myVali: ".vali", //input父盒子的class，可自定义类名
+        isCheckbox: ".check", //勾选阅读同意
+
+        Required: ".Required", //验证必填选项，值为Required,input自己加class
+        RequiredTps: ["此项不能为空!!!"], //只验证不为空提示
+
+        Requireds: ".Requireds", //验证必填不同提示，值为Requireds,input自己加class
+        reqtps: ".reqtps", //验证不为空不同提示,input父盒子的class,可自定义类名
+        Reqlength: [
+            [2, 4]
+        ], //只验证不为空,设置最小长度和最大长度
+        ReqlengthTps: ["+不为空1"], //验证不为空长度提示
+        RequiredsTps: ["这是自定义提示1"], //默认提示
+
+        myName: ".username", //用户名id或class
+        myPassword: ".password", //密码id或class
+        myPasswordMinLength: 6, //密码最小长度，不写默认长度6
+        myPasswordMaxLength: 18, //密码最大长度，不写默认长度16
+        // myConfirmPassword: ".passw", //确认密码id或class
+        myPhone: ".phone", //手机号id或class
+        isPhoneCode: false, //开启手机短信验证，true开启，默认false不开启(此项功能与myPhone配合验证)
+        myPhone1: "#v", //修改手机号(原手机号用这个验证)id或class
+        phoneCodeInput: ".phcode", //短信验证码id或class（输入框）
+        myMailbox: ".eal", //邮箱id或class
+        myCode: ".v", //验证码id或class
+        PwdStrong: true, //密码强度验证，默认false不开启，true开启
+        isStrongTps: ["弱", "中", "强"], //密码强度提示，可自定义提示
+        myNameMinLength: 3, //用户名最小长度，不写默认长度3
+        myNameMaxLength: 18, //用户名最大长度，不写默认长度12
+    });
+
+
+    //找回密码表单验证
+    $.myvali({
+        myform: ".verifyformfind", //表单id
+        mybtn: ".btn", //提交表单按钮id	
+        myVali: ".vali", //input父盒子的class，可自定义类名
+        isCheckbox: ".check", //勾选阅读同意
+
+        Required: ".Required", //验证必填选项，值为Required,input自己加class
+        RequiredTps: ["此项不能为空!!!"], //只验证不为空提示
+
+        Requireds: ".Requireds", //验证必填不同提示，值为Requireds,input自己加class
+        reqtps: ".reqtps", //验证不为空不同提示,input父盒子的class,可自定义类名
+        Reqlength: [
+            [2, 4]
+        ], //只验证不为空,设置最小长度和最大长度
+        ReqlengthTps: ["+不为空1"], //验证不为空长度提示
+        RequiredsTps: ["这是自定义提示1"], //默认提示
+
+        myName: ".username", //用户名id或class
+        myPassword: ".password", //密码id或class
+        myPasswordMinLength: 6, //密码最小长度，不写默认长度6
+        myPasswordMaxLength: 18, //密码最大长度，不写默认长度16
+        // myConfirmPassword: ".passw", //确认密码id或class
+        myPhone: ".phone", //手机号id或class
+        isPhoneCode: false, //开启手机短信验证，true开启，默认false不开启(此项功能与myPhone配合验证)
+        myPhone1: "#v", //修改手机号(原手机号用这个验证)id或class
+        phoneCodeInput: ".phcode", //短信验证码id或class（输入框）
+        myMailbox: ".eal", //邮箱id或class
+        myCode: ".v", //验证码id或class
+        PwdStrong: true, //密码强度验证，默认false不开启，true开启
+        isStrongTps: ["弱", "中", "强"], //密码强度提示，可自定义提示
+        myNameMinLength: 3, //用户名最小长度，不写默认长度3
+        myNameMaxLength: 18, //用户名最大长度，不写默认长度12
+    });
+
+
+
+    // 引入其他功能
     $(document).ready(function (e) {
         $(document).jqueryMenu();
     });
-
-    // 判断是否登录，未登录则跳转到登录界面
-    if (localStorage.getItem('login') == 'off') {
-        window.open('./login.html');
-    }
-
-    // 获取cookie数据并渲染页面显示对应商品
-    $(document).car({
-        url: "../data/goodsright.json",
-        // url: "http://localhost/xtep/特步官方商城/dist/data/goodsright.json",
-        tbody: $('.tab_shopper').find('tbody')
-    });
-
 </script> -->
 
 </html>
-<script src="./lib/jquery-2.2.4.js"></script>
-<script src="./lib/layer/layer.js"></script>
 <script src="./js/axios.min.js"></script>
-<script src="./js/shoppingcar.js"></script>
+<script src="./js/login.js"></script>

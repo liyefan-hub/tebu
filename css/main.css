@@ -2092,7 +2092,7 @@ div.viplogo {
 /* 导航栏背景结束 */
 main {
   width: 100%;
-  min-height: 500px;
+  /* min-height: 500px; */
   position: relative; }
   main div.container {
     position: relative; }

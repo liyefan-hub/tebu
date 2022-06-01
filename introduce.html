@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./css/main.css">
     <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
+
+    <!-- 放大镜css -->
+    <link rel="stylesheet" href="./introduce.css">
     <title>商品详情页</title>
+
+
 </head>
 
 <body>
@@ -108,7 +113,7 @@
         <div class="container">
             <div id="mynav">
                 <div class="menu">
-                    <span><a href="javasccript:;">全部商品分类</a></span>
+                    <span><a href="./goodslist.html">全部商品分类</a></span>
                 </div>
                 <div id="menuList" style="display:none">
                     <ul>
@@ -472,15 +477,16 @@
             <div class="introducebox">
                 <div class="intleft">
                     <div class="imgdet">
-                        <div class="imgpart">
-                            <div class="pic goodsimg">
+                        <!--! 放大镜 -->
+                       <div class="imgpart box" id="box">
+                            <div class="pic goodsimg small" id="small">
                                 <img src="./assets/images/introduce/01.jpg" alt="">
 
-                                <div class="magnify"></div>
+                                <div class="magnify mask" id="mask"></div>
                             </div>
 
-                            <div class="bigpic goodsimg">
-                                <img src="./assets/images/introduce/01.jpg" alt="">
+                            <div class="bigpic goodsimg big" id="big">
+                                <img src="./assets/images/introduce/01.jpg" alt="" id="img">
                             </div>
                         </div>
 
@@ -697,9 +703,9 @@
 
 
     <!-- 侧边固定定位导航 -->
-    <!-- <div id="sidebox">
-        PC右侧固定导航
-         <div class="sidebg"></div>
+    <div id="sidebox">
+        <!-- PC右侧固定导航 -->
+        <!-- <div class="sidebg"></div>
         <div class="sidenav">
             <div class="sidelogo">
                 <a href="javascript:;">
@@ -745,26 +751,20 @@
                     <div class="backtop">返回顶部</div>
                     <i class="go"></i>
                 </div>
-            </div> -->
-        <!-- </div> -->
-
-
-
-
-
-
+            </div>
+        </div> -->
     </div>
 </body>
 
 
-<script type="text/javascript" src="./assets/js/jquery.1.7.2.min.js"></script>
+<!-- <script type="text/javascript" src="./assets/js/jquery.1.7.2.min.js"></script>
 <script type="text/javascript" src="./assets/js/mvali.js"></script>
 <script type="text/javascript" src="./assets/js/picMove.js"></script>
 <script type="text/javascript" src="./assets/js/jquery.cookie.js"></script>
 <script type="text/javascript" src="./assets/js/jquery.fly.min.js"></script>
-<script type="text/javascript" src="./js/main.js"></script>
+<script type="text/javascript" src="./js/main.js"></script> -->
 <!-- <script type="text/javascript" src="./js/main.min.js"></script> -->
-<script>
+<!-- <script>
     // 引入脚部
     $('#foot').load("./public.html footer");
 
@@ -906,6 +906,12 @@
 
 
     });
-</script>
+</script> -->
 
 </html>
+<!-- 引入放大镜的js -->
+<script src="./js/introduce.js"></script>
+
+<script src="./js/axios.min.js"></script>
+
+<script src="./js/introduce2.js"></script>
